@@ -1,16 +1,16 @@
 stages:
   setup:
-    cmd:  ipynb-py-convert CNN.ipynb CNN.py
+    cmd:  ipynb-py-convert disease-model.ipynb disease-model.py
     deps:
-    - CNN.ipynb
+    - disease-model.ipynb
     outs:
-    - CNN.py  
+    - disease-model.py  
   train:
-    cmd: python CNN.py
+    cmd: python disease-model.py
     deps:
-    - CNN.py
+    - disease-model.py
     outs:
-    - cm.png
+    - stats.png
     metrics:
     - metrics.json:
         cache: false
