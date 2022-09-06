@@ -12,8 +12,8 @@ jobs:
       - name: Fetch resources
         run: |
             pip install -r require.txt
-            ipynb-py-convert CNN.ipynb CNN.py
-            python CNN.py 
+            ipynb-py-convert disease-model.ipynb disease-model.py
+            python disease-model.py 
         
       - name: Update resources
         uses: test-room-7/action-update-file@v1
