@@ -1,4 +1,4 @@
-name: compare
+name: compare-and-update-metrics
 on:
   push:
     branches:
@@ -23,5 +23,11 @@ jobs:
             
             echo "## confusion matrix" >> report.md
             cml publish cm.png --md >> report.md
-            
             cml send-comment report.md
+            
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
+        with:
+          file-path: metrics.json
+          commit-msg: Update metrics.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
