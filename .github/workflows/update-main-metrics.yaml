@@ -12,7 +12,7 @@ jobs:
       - name: Fetch resources
         run: |
             pip install -r require.txt
-            ipynb-py-convert disease-model.ipynb disease-model.py
+            ipynb-py-convert disease_model.ipynb disease_model.py
             python disease-model.py 
         
       - name: Update resources
