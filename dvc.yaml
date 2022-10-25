@@ -1,14 +1,14 @@
 stages:
   setup:
-    cmd:  ipynb-py-convert disease-model.ipynb disease-model.py
+    cmd:  ipynb-py-convert disease_model.ipynb disease_model.py
     deps:
-    - disease-model.ipynb
+    - disease_model.ipynb
     outs:
-    - disease-model.py  
+    - disease_model.py  
   train:
-    cmd: python disease-model.py
+    cmd: python disease_model.py
     deps:
-    - disease-model.py
+    - disease_model.py
     outs:
     - stats.png
     metrics:
