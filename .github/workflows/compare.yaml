@@ -1,4 +1,4 @@
-name: disease-spread-model
+name: compare
 on:
   push:
     branches:
