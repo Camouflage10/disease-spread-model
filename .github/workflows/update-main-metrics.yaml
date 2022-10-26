@@ -1,4 +1,3 @@
-
 name: push-master
 on:
   push:
@@ -12,8 +11,8 @@ jobs:
       - name: Fetch resources
         run: |
             pip install -r require.txt
-            ipynb-py-convert CNN.ipynb CNN.py
-            python CNN.py 
+            ipynb-py-convert disease_model.ipynb disease_model.py
+            python disease_model.py 
         
       - name: Update resources
         uses: test-room-7/action-update-file@v1
