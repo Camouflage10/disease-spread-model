@@ -7,3 +7,4 @@ keras
 seaborn
 ipynb-py-convert
 ruamel.yaml
+xgboost
