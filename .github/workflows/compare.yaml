@@ -22,7 +22,7 @@ jobs:
             dvc metrics diff --show-md main > report.md
             
             echo "## confusion matrix" >> report.md
-            cml publish cm.png --md >> report.md
+            cml publish stats.png --md >> report.md
             cml send-comment report.md
             
       - name: Update resources
