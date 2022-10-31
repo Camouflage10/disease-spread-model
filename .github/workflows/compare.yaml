@@ -21,7 +21,7 @@ jobs:
             
             dvc metrics diff --show-md main > report.md
             
-            echo "## confusion matrix" >> report.md
+            echo "## metrics graph" >> report.md
             cml asset publish stats.png --md >> report.md
             cml send-comment report.md
             
